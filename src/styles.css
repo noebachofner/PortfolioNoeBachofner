@@ -181,12 +181,13 @@ html {
     margin-bottom: 10px;
     white-space: nowrap;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: color 0.85s ease-in-out;
+    transition: color 0.85s ease-in-out, transform 0.45s ease-in-out;
     color: #000000;
 }
 
 .welcomeText h1:hover {
     color: var(--hover-button-color);
+    transform: scale(1.01);
 }
 
 .category-container h1 {
@@ -246,3 +247,109 @@ html {
     width: 40px;
     height: 40px;
 }
+
+@media (max-width: 1150px) {
+    .welcomeText h1 {
+        font-size: 60px;
+    }
+    .portfolio-image img {
+        width: 350px;
+        height: 435px;
+    }
+    .category-container {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 10px 20px;
+        width: 90%;
+    }
+
+    .logo a {
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        gap: 15px;
+    }
+
+    .navbar-links a {
+        font-size: 14px;
+    }
+
+    .home-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .welcomeText h1 {
+        font-size: 40px;
+        text-align: center !important;
+        white-space: normal;
+    }
+
+    .portfolio-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .portfolio-image img {
+        width: 280px;
+        height: 350px;
+    }
+
+    .category-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .category-container h1 {
+        text-align: center !important;
+        font-size: 45px;
+    }
+
+    .category {
+        padding: 80px 20px;
+    }
+
+    .github-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .github-logo img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+
+    .navbar-links a {
+        font-size: 12px;
+    }
+
+    .welcomeText h1 {
+        font-size: 32px;
+    }
+
+    .category-container h1 {
+        font-size: 35px;
+    }
+
+    .portfolio-image img {
+        width: 240px;
+        height: 300px;
+    }
+}
+
