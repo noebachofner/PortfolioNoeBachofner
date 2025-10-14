@@ -1,0 +1,11 @@
+{
+  "name": "PortfolioNoéBachofner",
+  "version": "1.0.0",
+  "description": "Portfolio website for Noé Bachofner",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "private": true
+}

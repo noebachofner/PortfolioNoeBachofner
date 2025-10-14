@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('fonts/helveticanowtext-bold-demo.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('fonts/helveticanowtext-bolditalic-demo.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('fonts/helveticanowtext-black-demo.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Text';
+    src: url('fonts/helveticanowtext-blackitalic-demo.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hover-button-color: #7e2654;;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 0.8px, rgba(255, 255, 255, 0.1) 0.8px);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    background-attachment: fixed;
+    font-family: Roboto, serif;
+
+    min-height: 300vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+h1 {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    padding: 15px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+
+
+    max-width: 1500px;
+    width: 95%;
+
+    z-index: 1000;
+}
+.navbar-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--hover-button-color);
+}
+
+.logo {
+
+}
+.logo a {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    text-align: center;
+    user-select: none;
+}
+
+.logo a:hover {
+    color: var(--hover-button-color);
+}
+
+.category {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px;
+}
+
+.category.tall {
+    min-height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.category-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: 150px;
+    margin-right: auto;
+}
+.category-container p {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.welcomeText {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.welcomeText h1 {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 75px;
+    text-align: left !important;
+    margin-bottom: 10px;
+}
