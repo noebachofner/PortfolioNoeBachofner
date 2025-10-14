@@ -7,5 +7,8 @@
     "start": "npx http-server -p 8080 -o",
     "dev": "npx http-server -p 8080 -o"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@vercel/analytics": "^1.5.0"
+  }
 }
