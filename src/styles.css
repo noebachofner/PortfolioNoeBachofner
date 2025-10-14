@@ -90,6 +90,7 @@ h1 {
 
     z-index: 1000;
 }
+
 .navbar-links {
     display: flex;
     gap: 30px;
@@ -102,7 +103,7 @@ h1 {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.5s ease-in-out;
 }
 
 .navbar-links a:hover {
@@ -112,6 +113,7 @@ h1 {
 .logo {
 
 }
+
 .logo a {
     font-family: "Helvetica Now Text", monospace;
     font-style: normal;
@@ -119,9 +121,10 @@ h1 {
     font-size: 30px;
     text-decoration: none;
     color: #333;
-    transition: color 0.3s;
+    transition: color 0.5s ease-in-out;
     text-align: center;
     user-select: none;
+
 }
 
 .logo a:hover {
@@ -147,9 +150,10 @@ h1 {
 .category-container {
     max-width: 1200px;
     width: 100%;
-    margin-left: 150px;
+    margin-left: 50px;
     margin-right: auto;
 }
+
 .category-container p {
     font-family: "Helvetica Now Text", monospace;
     font-style: normal;
@@ -165,6 +169,7 @@ html {
     font-family: "Helvetica Now Text", monospace;
     font-style: normal;
     font-weight: 900;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .welcomeText h1 {
@@ -174,4 +179,70 @@ html {
     font-size: 75px;
     text-align: left !important;
     margin-bottom: 10px;
+    white-space: nowrap;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: color 0.85s ease-in-out;
+    color: #000000;
+}
+
+.welcomeText h1:hover {
+    color: var(--hover-button-color);
+}
+
+.category-container h1 {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    text-align: left !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.portfolio-image {
+    flex-shrink: 0;
+}
+
+.portfolio-image img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.85s ease-in-out;
+}
+
+.portfolio-image img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px var(--hover-button-color);
+}
+
+.github-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.85s ease-in-out;
+    z-index: 1000;
+}
+
+.github-logo:hover {
+    transform: scale(1.2);
+}
+
+.github-logo img {
+    width: 40px;
+    height: 40px;
 }
