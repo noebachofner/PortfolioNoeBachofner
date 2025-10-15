@@ -327,8 +327,9 @@ html {
 @media (max-width: 1000px) {
     .navbar {
         padding: 10px 20px;
-        position: relative;
+        position: fixed;
         flex-wrap: wrap;
+        align-items: center;
     }
 
     .logo a {
