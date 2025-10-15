@@ -63,6 +63,9 @@ h1 {
     user-select: none;
 }
 
+.icon.nav-icon {
+    display: none;
+}
 
 .navbar {
     position: fixed;
@@ -90,6 +93,7 @@ h1 {
     list-style: none;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 .navbar-links a {
@@ -201,6 +205,46 @@ html {
     color: var(--hover-button-color);
 }
 
+.welcomeText .subtitle {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    color: #000000;
+    margin-top: 70px;
+    text-align: left !important;
+    transition: color 0.85s ease-in-out;
+    user-select: none;
+}
+
+.welcomeText .subtitle:hover {
+    color: var(--hover-button-color);
+}
+
+.welcomeText .subtitle:hover .text-button {
+    color: #000000;
+}
+
+.text-button:hover {
+    color: #000000;
+}
+
+.text-button {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: var(--hover-button-color);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: color 0.85s ease-in-out;
+    user-select: none;
+}
+
 .category-container h1 {
     font-family: "Helvetica Now Text", monospace;
     font-style: normal;
@@ -283,19 +327,33 @@ html {
 @media (max-width: 1000px) {
     .navbar {
         padding: 10px 20px;
-        width: 90%;
+        position: relative;
+        flex-wrap: wrap;
     }
 
     .logo a {
         font-size: 22px;
     }
 
+    .icon.nav-icon {
+        display: block;
+        margin-left: auto;
+    }
+
     .navbar-links {
-        gap: 15px;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .navbar-links.active {
+        display: flex;
     }
 
     .navbar-links a {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .logo img {
@@ -319,6 +377,16 @@ html {
         text-align: left !important;
         white-space: normal;
         margin-bottom: 5px;
+    }
+
+    .welcomeText .subtitle {
+        font-size: 20px;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .text-button {
+        font-size: 20px;
     }
 
     .portfolio-image {
@@ -360,6 +428,7 @@ html {
 @media (max-width: 480px) {
     .navbar {
         padding: 10px 15px;
+        width: 90%;
     }
 
     .logo a {
@@ -367,8 +436,9 @@ html {
     }
 
     .navbar-links a {
-        font-size: 12px;
+        font-size: 16px;
     }
+
     .logo img {
         height: 28px;
     }
@@ -376,6 +446,15 @@ html {
     .welcomeText h1 {
         font-size: 28px;
         white-space: nowrap;
+    }
+
+    .welcomeText .subtitle {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .text-button {
+        font-size: 16px;
     }
 
     .category-container h1 {
