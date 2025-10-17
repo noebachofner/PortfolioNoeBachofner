@@ -1,0 +1,29 @@
+.contact-info-panel p {
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%)
+    translateY(-10px);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+.copy-tooltip.show {
+    opacity: 1;
+    transform: translateX(-50%)
+    translateY(-20px);
+}
