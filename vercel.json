@@ -1,3 +1,6 @@
 {
-  "errorPage": "404.html"
+  "buildCommand": "echo 'No build required'",
+  "outputDirectory": "src",
+  "cleanUrls": true,
+  "trailingSlash": false
 }
