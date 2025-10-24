@@ -415,7 +415,6 @@ html {
 .contact-info-panel p:hover {
     color: var(--hover-button-color);
     background: rgba(178, 21, 90, 0.08);
-    transform: translateX(5px);
 }
 
 .contact-container {
