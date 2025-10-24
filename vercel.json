@@ -1,7 +1,22 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/src/$1" }
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/",
+      "dest": "/src/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/$1"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/src/404.html"
+    }
   ]
 }
