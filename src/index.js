@@ -1,7 +1,30 @@
-console.log('Hey there! Welcome to my Website')
+console.log('Hey there! Welcome to the Console of my Website')
 
-if (!window.location.hash) {
-    window.location.hash = '#home';
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                history.replaceState(null, null, window.location.pathname);
+            }, 800);
+        }
+    });
+});
+
+if (window.location.hash) {
+    const targetId = window.location.hash.substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+        setTimeout(() => {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                history.replaceState(null, null, window.location.pathname);
+            }, 800);
+        }, 100);
+    }
 }
 
 const icons = document.querySelectorAll('.icon');

@@ -4,8 +4,8 @@
   "description": "Portfolio website for Noé Bachofner",
   "main": "src/index.js",
   "scripts": {
-    "start": "npx http-server -p 8080 -o",
-    "dev": "npx http-server -p 8080 -o"
+    "start": "npx http-server src -p 8080 -o --proxy http://localhost:8080? -c-1",
+    "dev": "npx http-server src -p 8080 -o --proxy http://localhost:8080? -c-1"
   },
   "private": true,
   "dependencies": {

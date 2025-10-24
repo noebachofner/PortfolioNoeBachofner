@@ -43,6 +43,12 @@ body {
     position: relative;
 }
 
+body.page-404 {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
 body::before {
     content: '';
     position: fixed;
@@ -187,6 +193,13 @@ h1 {
     font-size: 30px;
 }
 
+.site404category p {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -196,6 +209,83 @@ html {
     font-style: normal;
     font-weight: 900;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text404 {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.text404 h1{
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 110px;
+    text-align: left !important;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: color 0.85s ease-in-out;
+    color: #000000;
+}
+
+.text404 h2{
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 55px;
+    text-align: left !important;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: color 0.85s ease-in-out;
+    color: #000000;
+}
+
+.text404 p {
+    text-align: left !important;
+}
+
+.text404 h1:hover {
+    color: var(--hover-button-color);
+}
+
+.text404 .subtitle {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    color: #000000;
+    margin-top: 70px;
+    text-align: left !important;
+    transition: color 0.85s ease-in-out;
+    user-select: none;
+}
+
+.text404 .subtitle:hover {
+    color: var(--hover-button-color);
+}
+
+.text404 .subtitle:hover .text-button {
+    color: #000000;
+}
+
+.site404category .site404category h1 {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    text-align: left !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.site404category {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
 }
 
 .welcomeText h1 {
@@ -610,12 +700,20 @@ html {
         font-size: 60px;
     }
 
+    .text404 h1 {
+        font-size: 60px;
+    }
+
     .portfolio-image img {
         width: 350px;
         height: 435px;
     }
 
     .category-container {
+        padding: 0 35px;
+    }
+
+    .site404category {
         padding: 0 35px;
     }
 }
@@ -684,6 +782,25 @@ html {
         margin-top: 30px;
     }
 
+    .text404 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text404 h1 {
+        font-size: 40px;
+        text-align: left !important;
+        white-space: normal;
+        margin-bottom: 5px;
+    }
+
+    .text404 .subtitle {
+        font-size: 20px;
+        text-align: left;
+        margin-top: 30px;
+    }
+
     .text-button {
         font-size: 20px;
     }
@@ -708,7 +825,22 @@ html {
         margin: 0 auto;
     }
 
+    .site404category {
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
     .category-container h1 {
+        text-align: left !important;
+        font-size: 45px;
+    }
+
+    .site404category h2 {
+        text-align: left !important;
+        font-size: 20px;
+    }
+
+    .site404category h1 {
         text-align: left !important;
         font-size: 45px;
     }
@@ -752,11 +884,29 @@ html {
         margin-top: 20px;
     }
 
+    .text404 h1 {
+        font-size: 28px;
+        white-space: nowrap;
+    }
+
+    .text404 .subtitle {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
     .text-button {
         font-size: 16px;
     }
 
     .category-container h1 {
+        font-size: 35px;
+    }
+
+    .site404category h2 {
+        font-size: 20px;
+    }
+
+    .site404category h1 {
         font-size: 35px;
     }
 
@@ -958,6 +1108,4 @@ html {
         padding: 14px 16px;
     }
 }
-
-
 
