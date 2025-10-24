@@ -1,14 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "outputDirectory": "src",
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/404.html"
-    }
-  ]
+  "trailingSlash": false
 }
