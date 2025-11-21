@@ -1,5 +1,12 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/src/$1" }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "status": 404,
+      "dest": "/src/404.html"
+    }
   ]
 }
