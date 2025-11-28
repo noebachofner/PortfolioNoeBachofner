@@ -1084,8 +1084,9 @@ html {
 }
 
 .all-projects-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
     max-width: 1400px;
     width: 100%;
@@ -1101,6 +1102,8 @@ html {
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
+    width: 380px;
+    flex-shrink: 0;
 }
 
 .project-card:hover {
@@ -1249,7 +1252,6 @@ html {
 /* Responsive Design for Project Cards */
 @media (max-width: 1200px) {
     .all-projects-view {
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 35px;
     }
 }
@@ -1261,7 +1263,6 @@ html {
     }
 
     .all-projects-view {
-        grid-template-columns: 1fr;
         max-width: 600px;
         gap: 30px;
     }
@@ -1388,5 +1389,72 @@ html {
 @media (max-width: 480px) {
     .page-404 .errorSiteContainer h1 {
         font-size: 6rem;
+    }
+}
+
+.footer {
+    padding: 20px 20px 22px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.information-container,
+.links-container {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.information-container p {
+    font-family: "Helvetica Now Text", monospace;
+    font-weight: 700;
+    font-size: 14px;
+    color: #555;
+    user-select: none;
+}
+
+.links-container a {
+    font-family: "Helvetica Now Text", monospace;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.links-container a:hover {
+    color: var(--hover-button-color);
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .information-container
+    .links-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
 }
