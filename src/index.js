@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // hCaptcha Token abrufen
         const hcaptchaResponse = hcaptcha.getResponse();
 
         if (!hcaptchaResponse) {
@@ -34,15 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const formData = new FormData(form);
-
-        // hCaptcha Response zum FormData hinzufügen
-        formData.append('h-captcha-response', hcaptchaResponse);
-
         const object = {};
 
         formData.forEach((value, key) => {
-            object[key] = value;
+            if (key !== 'g-recaptcha-response') {
+                object[key] = value;
+            }
         });
+
+        object['h-captcha-response'] = hcaptchaResponse;
 
         const json = JSON.stringify(object);
 
@@ -62,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.status === 200) {
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('success');
-                    // hCaptcha zurücksetzen nach erfolgreichem Submit
                     hcaptcha.reset();
                 } else {
                     console.log(response);
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('error');
-                    // hCaptcha zurücksetzen bei Fehler
                     hcaptcha.reset();
                 }
             })
@@ -76,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log(error);
                 formResult.innerHTML = "Something went wrong!";
                 formResult.classList.add('error');
-                // hCaptcha zurücksetzen bei Fehler
                 hcaptcha.reset();
             })
             .finally(function () {
