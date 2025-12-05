@@ -54,10 +54,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 formResult.innerHTML = "Something went wrong!";
                 formResult.classList.add('error');
             })
-            .then(function () {
+            .finally(function () {
                 form.reset();
+                if (window.turnstile) {
+                    turnstile.reset();
+                }
+
+                const btn = document.getElementById("submitButton");
+                btn.disabled = true;
+                btn.style.opacity = "0.5";
+                btn.style.cursor = "not-allowed";
+
                 setTimeout(() => {
                     formResult.classList.remove('show');
+                    formResult.classList.remove('success', 'error');
                 }, 5000);
             });
     });
@@ -72,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentAge.textContent = calculateAge();
     }
 
-    function calculateAge () {
+    function calculateAge() {
         const birthDate = new Date("04/10/2008");
         const todayDate = new Date();
 
@@ -106,4 +116,12 @@ function copyEmail() {
     }).catch(err => {
         console.error('Failed to copy email: ', err);
     });
+}
+
+
+function enableButton() {
+    const btn = document.getElementById("submitButton");
+    btn.disabled = false;
+    btn.style.opacity = "1";
+    btn.style.cursor = "pointer";
 }

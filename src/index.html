@@ -21,6 +21,7 @@
     <link rel="icon" type="image/x-icon" href="images/OSI_LOGO_RED.ico">
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="index.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 <nav class="navbar">
@@ -117,6 +118,7 @@
                 </div>
             </div>
             <form id="contact-form" class="contact-container fade-in">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <input type="hidden" name="access_key" value="d486e2ba-6182-438a-8d67-311ed66ebe9e">
                 <input type="hidden" name="from_name" value="Portfolio Contact Form">
                 <label class="input-label fade-in">
@@ -138,7 +140,11 @@
                     <textarea class="input-text-field" name="message" maxlength="10000"
                               placeholder="I want my krabby patty's back from you!" required></textarea>
                 </label>
-                <button type="submit" class="submit-button fade-in">Send Message</button>
+                <div class="cf-turnstile"
+                     data-sitekey="0x4AAAAAACE9ckodkDABw5MJ"
+                     data-callback="enableButton"></div>
+
+                <button type="submit" id="submitButton" class="submit-button fade-in" disabled style ="opacity: 0.5; cursor: not-allowed;">Send Message</button>
                 <div id="form-result" class="form-result"></div>
             </form>
         </div>
