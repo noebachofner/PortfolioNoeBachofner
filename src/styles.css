@@ -39,7 +39,6 @@
 
 body {
     font-family: Roboto, serif;
-    min-height: 300vh;
     position: relative;
     user-select: none;
 }
@@ -68,6 +67,41 @@ body::before {
     display: none;
 }
 
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -150%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes softFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: softFadeIn 1s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+    }
+
+}
+
 .navbar {
     position: fixed;
     top: 25px;
@@ -86,6 +120,12 @@ body::before {
     max-width: 1500px;
     width: 95%;
     z-index: 1000;
+
+
+    animation-name: slideDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
 .navbar-links {
@@ -129,6 +169,10 @@ body::before {
     width: auto;
     user-select: none;
 
+}
+
+.all-projects-button {
+/ / TODO Styling Website
 }
 
 .logo a {
@@ -942,7 +986,6 @@ html {
         padding: 14px 16px;
     }
 }
-
 
 
 .errorSiteContainer {

@@ -3,7 +3,8 @@
 <head>
     <title>Portfolio Noé Bachofner</title>
     <meta name="title" content="Portfolio Noé Bachofner">
-    <meta name="description" content="I'm Noé Bachofner, a Software Developer Apprentice based in Baden, Aargau, Switzerland. Explore my projects and coding skills in software engineering.">
+    <meta name="description"
+          content="I'm Noé Bachofner, a Software Developer Apprentice based in Baden, Aargau, Switzerland. Explore my projects and coding skills in software engineering.">
     <meta name="keywords" content="Noé Bachofner, Portfolio, Portfolio Noé Bachofner, Noé Bachofner Portfolio">
     <meta name="robots" content="index,follow">
     <meta charset="utf-8">
@@ -47,44 +48,44 @@
 </nav>
 <section class="category" id="home">
     <div class="category-container home-container">
-        <div class="welcomeText">
+        <div class="welcomeText fade-in">
             <h1>Welcome</h1>
             <h1>I'm Noé Bachofner</h1>
             <p class="subtitle">But whatever, <a href="#projects" class="text-button">look here</a> for my projects</p>
         </div>
-        <div class="portfolio-image">
-            <img src="images/Portfolio_Photo_Of_Me_SW.jpeg" alt="Noé Bachofner Portfolio Image" draggable="false"
+        <div class="portfolio-image fade-in">
+            <img src="/src/images/Portfolio_Photo_Of_Me_SW.jpeg" alt="Noé Bachofner Portfolio Image" draggable="false"
                  fetchpriority="high">
         </div>
     </div>
 </section>
-<section class="category tall" id="about">
+<section class="category tall fade-in" id="about">
     <div class="category-container">
         <h1>Still in progress...</h1>
     </div>
 </section>
-<section class="category" id="projects">
-    <div class="category-container">
-        <div class="projects-section">
-            <h1>Projects</h1>
-            <div class="project-container">
+<section class="category fade-in" id="projects">
+    <div class="category-container fade-in">
+        <div class="projects-section fade-in">
+            <h1 class="fade-in">Projects</h1>
+            <div class="project-container fade-in">
 
             </div>
-            <div class="project-container">
+            <div class="project-container fade-in">
 
             </div>
-            <div class="project-container">
+            <div class="project-container fade-in">
 
             </div>
-            <a href="projects.html">All my Projects</a>
+            <a href="projects.html" class="all-projects-button">All my Projects</a>
         </div>
     </div>
 </section>
-<section class="category" id="contact">
-    <div class="category-container">
+<section class="category fade-in" id="contact">
+    <div class="category-container fade-in">
         <h1 class="contact-title">Contact Me</h1>
         <div class="contact">
-            <div class="contact-info-panel">
+            <div class="contact-info-panel fade-in">
                 <div class="contact-info-box">
                     <div class="email-section">
                         <h2>E-Mail</h2>
@@ -115,35 +116,35 @@
                     </div>
                 </div>
             </div>
-            <form id="contact-form" class="contact-container">
+            <form id="contact-form" class="contact-container fade-in">
                 <input type="hidden" name="access_key" value="d486e2ba-6182-438a-8d67-311ed66ebe9e">
                 <input type="hidden" name="from_name" value="Portfolio Contact Form">
-                <label class="input-label">
+                <label class="input-label fade-in">
                     <span class="label-text">Name*</span>
                     <input class="input-field" type="text" name="name" placeholder="SpongeBob SquarePants" required>
                 </label>
-                <label class="input-label">
+                <label class="input-label fade-in">
                     <span class="label-text">E-Mail*</span>
                     <input class="input-field" type="email" name="email" placeholder="spongebob@squarepants.ch"
                            required>
                 </label>
-                <label class="input-label">
+                <label class="input-label fade-in">
                     <span class="label-text">Subject*</span>
                     <input class="input-field" type="text" name="subject" placeholder="I want my krabby patty"
                            required>
                 </label>
-                <label class="input-label">
+                <label class="input-label fade-in">
                     <span class="label-text">Message*</span>
                     <textarea class="input-text-field" name="message" maxlength="10000"
                               placeholder="I want my krabby patty's back from you!" required></textarea>
                 </label>
-                <button type="submit" class="submit-button">Send Message</button>
+                <button type="submit" class="submit-button fade-in">Send Message</button>
                 <div id="form-result" class="form-result"></div>
             </form>
         </div>
     </div>
 </section>
-<footer class="footer">
+<footer class="footer fade-in">
     <div class="footer-container">
         <div class="information-container">
             <p>&copy; <span id="current-year"></span> Noé Bachofner. All rights reserved.</p>
