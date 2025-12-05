@@ -20,7 +20,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        // hCaptcha Token abrufen
+        const hcaptchaResponse = hcaptcha.getResponse();
+
+        if (!hcaptchaResponse) {
+            formResult.innerHTML = "Please complete the captcha verification.";
+            formResult.classList.add('show', 'error');
+            setTimeout(() => {
+                formResult.classList.remove('show', 'error');
+            }, 5000);
+            return;
+        }
+
         const formData = new FormData(form);
+
+        // hCaptcha Response zum FormData hinzufügen
+        formData.append('h-captcha-response', hcaptchaResponse);
+
         const object = {};
 
         formData.forEach((value, key) => {
@@ -45,31 +62,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.status === 200) {
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('success');
+                    // hCaptcha zurücksetzen nach erfolgreichem Submit
+                    hcaptcha.reset();
                 } else {
                     console.log(response);
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('error');
+                    // hCaptcha zurücksetzen bei Fehler
+                    hcaptcha.reset();
                 }
             })
             .catch(error => {
                 console.log(error);
                 formResult.innerHTML = "Something went wrong!";
                 formResult.classList.add('error');
+                // hCaptcha zurücksetzen bei Fehler
+                hcaptcha.reset();
             })
             .finally(function () {
                 form.reset();
-
-                if (window.hcaptcha) {
-                    hcaptcha.reset();
-                }
-
-                const btn = document.getElementById("submitButton");
-                if (btn) {
-                    btn.disabled = true;
-                    btn.style.opacity = "0.5";
-                    btn.style.cursor = "not-allowed";
-                }
-
                 setTimeout(() => {
                     formResult.classList.remove('show');
                     formResult.classList.remove('success', 'error');

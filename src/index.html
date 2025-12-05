@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="libraries/hamburger.css">
     <link rel="stylesheet" href="libraries/infopopup.css">
     <link rel="icon" type="image/x-icon" href="images/OSI_LOGO_RED.ico">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -123,7 +124,6 @@
             </div>
             <form id="contact-form" class="contact-container fade-in">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
                 <input type="hidden" name="access_key" value="d486e2ba-6182-438a-8d67-311ed66ebe9e">
                 <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
@@ -146,14 +146,9 @@
                               placeholder="I want my krabby patty's back from you!" required></textarea>
                 </label>
 
-                <div class="h-captcha"
-                     data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                     data-callback="enableButton"
-                     data-expired-callback="disableButton"></div>
+                <div class="h-captcha fade-in" data-sitekey="c8fcf288-a9b0-4af6-abb2-bc8e75cc4490"></div>
 
-                <button type="submit" id="submitButton" class="submit-button fade-in" disabled
-                        style="opacity: 0.5; cursor: not-allowed;">Send Message
-                </button>
+                <button type="submit" id="submitButton" class="submit-button fade-in">Send Message</button>
                 <div id="form-result" class="form-result"></div>
             </form>
         </div>
@@ -172,25 +167,5 @@
 <a href="https://github.com/noebachofner" target="_blank" class="github-logo" draggable="false">
     <img src="images/github_logo.png" alt="GitHub Account" draggable="false">
 </a>
-
-<script>
-    function enableButton() {
-        const btn = document.getElementById("submitButton");
-        if (btn) {
-            btn.disabled = false;
-            btn.style.opacity = "1";
-            btn.style.cursor = "pointer";
-        }
-    }
-    function disableButton() {
-        const btn = document.getElementById("submitButton");
-        if (btn) {
-            btn.disabled = true;
-            btn.style.opacity = "0.5";
-            btn.style.cursor = "not-allowed";
-        }
-    }
-</script>
-<script defer src="index.js"></script>
 </body>
 </html>
