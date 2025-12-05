@@ -21,27 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const hcaptchaResponse = hcaptcha.getResponse();
-
-        if (!hcaptchaResponse) {
-            formResult.innerHTML = "Please complete the captcha verification.";
-            formResult.classList.add('show', 'error');
-            setTimeout(() => {
-                formResult.classList.remove('show', 'error');
-            }, 5000);
-            return;
-        }
-
         const formData = new FormData(form);
         const object = {};
 
         formData.forEach((value, key) => {
-            if (key !== 'g-recaptcha-response') {
-                object[key] = value;
-            }
+            object[key] = value;
         });
-
-        object['h-captcha-response'] = hcaptchaResponse;
 
         const json = JSON.stringify(object);
 
@@ -61,19 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.status === 200) {
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('success');
-                    hcaptcha.reset();
                 } else {
                     console.log(response);
                     formResult.innerHTML = jsonResponse.message;
                     formResult.classList.add('error');
-                    hcaptcha.reset();
                 }
             })
             .catch(error => {
                 console.log(error);
                 formResult.innerHTML = "Something went wrong!";
                 formResult.classList.add('error');
-                hcaptcha.reset();
             })
             .finally(function () {
                 form.reset();

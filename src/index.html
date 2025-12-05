@@ -19,9 +19,10 @@
     <link rel="stylesheet" href="libraries/hamburger.css">
     <link rel="stylesheet" href="libraries/infopopup.css">
     <link rel="icon" type="image/x-icon" href="images/OSI_LOGO_RED.ico">
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Web3Forms Script mit hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script defer src="index.js"></script>
 </head>
 <body>
@@ -146,7 +147,8 @@
                               placeholder="I want my krabby patty's back from you!" required></textarea>
                 </label>
 
-                <div class="h-captcha fade-in" data-sitekey="c8fcf288-a9b0-4af6-abb2-bc8e75cc4490"></div>
+                <!-- hCaptcha Widget -->
+                <div class="h-captcha fade-in" data-captcha="true"></div>
 
                 <button type="submit" id="submitButton" class="submit-button fade-in">Send Message</button>
                 <div id="form-result" class="form-result"></div>
