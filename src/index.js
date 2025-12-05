@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         const formData = new FormData(form);
         const object = {};
+
         formData.forEach((value, key) => {
             object[key] = value;
         });
+
         const json = JSON.stringify(object);
+
         formResult.innerHTML = "Please wait...";
         formResult.classList.add('show');
-
 
         fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -56,14 +58,17 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .finally(function () {
                 form.reset();
-                if (window.turnstile) {
-                    turnstile.reset();
+
+                if (window.hcaptcha) {
+                    hcaptcha.reset();
                 }
 
                 const btn = document.getElementById("submitButton");
-                btn.disabled = true;
-                btn.style.opacity = "0.5";
-                btn.style.cursor = "not-allowed";
+                if (btn) {
+                    btn.disabled = true;
+                    btn.style.opacity = "0.5";
+                    btn.style.cursor = "not-allowed";
+                }
 
                 setTimeout(() => {
                     formResult.classList.remove('show');
