@@ -62,10 +62,28 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Set current year in the footer
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
+    }
+
+    const currentAge = document.getElementById("current-age");
+    if (currentAge) {
+        currentAge.textContent = calculateAge();
+    }
+
+    function calculateAge () {
+        const birthDate = new Date("04/10/2008");
+        const todayDate = new Date();
+
+        var years = (todayDate.getFullYear() - birthDate.getFullYear());
+
+        if (todayDate.getMonth() < birthDate.getMonth() ||
+            todayDate.getMonth() == birthDate.getMonth() && todayDate.getDate() < birthDate.getDate()) {
+            years--;
+        }
+
+        return years;
     }
 });
 
