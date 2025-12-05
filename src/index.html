@@ -22,6 +22,16 @@
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="index.js"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        function enableButton() {
+            const btn = document.getElementById("submitButton");
+            if (btn) {
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                btn.style.cursor = "pointer";
+            }
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar">

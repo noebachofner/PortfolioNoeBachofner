@@ -117,11 +117,3 @@ function copyEmail() {
         console.error('Failed to copy email: ', err);
     });
 }
-
-
-function enableButton() {
-    const btn = document.getElementById("submitButton");
-    btn.disabled = false;
-    btn.style.opacity = "1";
-    btn.style.cursor = "pointer";
-}
