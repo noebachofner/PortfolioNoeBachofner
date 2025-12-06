@@ -111,3 +111,11 @@ function copyEmail() {
         console.error('Failed to copy email: ', err);
     });
 }
+
+const logo = document.querySelector('.logo a');
+if (logo) {
+    logo.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.reload();
+    });
+}

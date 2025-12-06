@@ -172,7 +172,42 @@ body::before {
 }
 
 .all-projects-button {
-/ / TODO Styling Website
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 18px;
+    display: inline-block;
+    padding: 14px 32px;
+    background: rgba(178, 21, 90, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(178, 21, 90, 0.9);
+    box-shadow: 0 10px 25px rgba(178, 21, 90, 0.35);
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 40px auto 0;
+    user-select: none;
+}
+
+.all-projects-button:hover {
+    background: var(--hover-button-color);
+    border-color: var(--hover-button-color);
+    box-shadow: 0 15px 35px rgba(178, 21, 90, 0.45);
+    transform: translateY(-3px);
+}
+
+.all-projects-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(178, 21, 90, 0.3);
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo a {
@@ -633,6 +668,48 @@ html {
 }
 
 
+.back-to-home-button {
+    font-family: "Helvetica Now Text", monospace;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: rgba(178, 21, 90, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(178, 21, 90, 0.9);
+    box-shadow: 0 10px 25px rgba(178, 21, 90, 0.35);
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    margin: 40px auto 0;
+}
+
+.back-to-home-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.back-to-home-button:hover {
+    background: var(--hover-button-color);
+    border-color: var(--hover-button-color);
+    box-shadow: 0 15px 35px rgba(178, 21, 90, 0.45);
+    transform: translateY(-3px);
+}
+
+.back-to-home-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(178, 21, 90, 0.3);
+}
+
+
+
 @media (max-width: 1150px) {
     .welcomeText h1 {
         font-size: 60px;
@@ -655,6 +732,16 @@ html {
         position: fixed;
         flex-wrap: wrap;
         align-items: center;
+    }
+
+    .back-to-home-button {
+        font-size: 15px;
+        padding: 13px 28px;
+    }
+
+    .all-projects-button {
+        font-size: 15px;
+        padding: 13px 28px;
     }
 
     .logo a {
@@ -758,6 +845,16 @@ html {
         width: 90%;
     }
 
+    .back-to-home-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .back-to-home-button svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .logo a {
         font-size: 18px;
     }
@@ -792,6 +889,12 @@ html {
         width: 240px;
         height: 300px;
     }
+
+    .all-projects-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
 }
 
 .social-links {
@@ -1460,7 +1563,7 @@ html {
 
 .information-container,
 .links-container {
-    padding: 0px 20px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -1494,7 +1597,7 @@ html {
         gap: 25px;
     }
 
-    .information-container
+    .information-container,
     .links-container {
         flex-direction: column;
         text-align: center;
