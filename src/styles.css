@@ -1240,16 +1240,17 @@ html {
 }
 
 .project-card {
-    background: transparent;
+    background: #ffffff;
     border: none;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     width: 380px;
     flex-shrink: 0;
+
 }
 
 .project-card:hover {
@@ -1602,5 +1603,93 @@ html {
         flex-direction: column;
         text-align: center;
         gap: 15px;
+    }
+}
+
+
+
+
+.about-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.box-top-left {
+    flex: 0 0 auto;
+    min-height: 800px;
+}
+
+.box-bottom-left {
+    min-height: 500px;
+    width: 100%;
+}
+
+.right-connected-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 1200px;
+}
+
+.right-content-top {
+    flex: 0 0 35%;
+    padding-bottom: 20px;
+}
+
+.right-content-bottom {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    width: 100%;
+}
+
+.about-grid-wrapper .about-box {
+    background: #ffffff;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+
+    transition: none;
+    transform: none;
+}
+
+.about-grid-wrapper .about-box:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+.about-grid-wrapper .about-box:hover h2 {
+    color: #222;
+}
+
+@media (max-width: 1000px) {
+    .about-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .box-top-left,
+    .box-bottom-left,
+    .right-connected-box {
+        min-height: 350px;
+        height: auto;
     }
 }
