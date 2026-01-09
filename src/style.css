@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Switzer';
+    src: url('./fonts/Switzer-Variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +18,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+    font-family: 'Switzer', Helvetica, Arial, sans-serif;;
     position: relative;
     user-select: none;
 }
@@ -110,7 +118,7 @@ body::before {
 }
 
 .navbar-links a {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-size: 16px;
     text-decoration: none;
@@ -144,7 +152,7 @@ body::before {
 }
 
 .all-projects-button {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -251,7 +259,7 @@ html {
 }
 
 .welcomeText .subtitle {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 35px;
@@ -464,7 +472,7 @@ html {
 .contact-container p {
     font-family: 'Helvetica Neue', monospace;
     font-style: normal;
-    font-weight: 20;
+    font-weight: 200;
     font-size: 30px;
 }
 
