@@ -191,7 +191,7 @@ body::before {
 }
 
 .logo a {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -235,14 +235,14 @@ html {
 }
 
 .welcomeText {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .welcomeText h1 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 75px;
@@ -283,7 +283,7 @@ html {
 }
 
 .text-button {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 35px;
@@ -299,7 +299,7 @@ html {
 }
 
 .category-container h1 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 70px;
@@ -363,7 +363,7 @@ html {
 }
 
 .contact-title {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 80px;
@@ -425,7 +425,7 @@ html {
 }
 
 .contact-info-panel h2 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -441,7 +441,7 @@ html {
 }
 
 .contact-info-panel p {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -470,14 +470,14 @@ html {
 }
 
 .contact-container p {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 200;
     font-size: 30px;
 }
 
 .input-field {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -517,7 +517,7 @@ html {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 22px;
@@ -535,7 +535,7 @@ html {
 }
 
 .input-text-field {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -574,7 +574,7 @@ html {
 }
 
 .submit-button {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 18px;
@@ -614,7 +614,7 @@ html {
 }
 
 .form-result {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -649,7 +649,7 @@ html {
 
 
 .back-to-home-button {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
@@ -737,7 +737,7 @@ html {
 }
 
 .errorSiteContainer h1 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 80px;
@@ -754,7 +754,7 @@ html {
 }
 
 .errorSiteContainer h2 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -772,7 +772,7 @@ html {
 }
 
 .errorSiteContainer a {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 20px;
@@ -817,7 +817,7 @@ html {
 }
 
 .project-site h1 {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 70px;
@@ -890,7 +890,7 @@ html {
 }
 
 .project-title {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 28px;
@@ -905,7 +905,7 @@ html {
 }
 
 .project-description {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -923,7 +923,7 @@ html {
 }
 
 .tech-tag {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 700;
     font-size: 13px;
@@ -949,7 +949,7 @@ html {
 }
 
 .project-btn {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-style: normal;
     font-weight: 900;
     font-size: 15px;
@@ -1049,7 +1049,7 @@ html {
 }
 
 .information-container p {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-weight: 700;
     font-size: 14px;
     color: #555;
@@ -1057,7 +1057,7 @@ html {
 }
 
 .links-container a {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-weight: 700;
     font-size: 14px;
     color: #333;
@@ -1174,10 +1174,20 @@ html {
     transform: translateY(-5px);
 }
 
-.tools-content img {
+.tools-content a {
     max-width: 80%;
     max-height: 80%;
     object-fit: contain;
+}
+
+.tools-content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tools-content img:hover {
+    opacity: 0.5;
+    cursor: alias;
 }
 
 @media (max-width: 1150px) {
@@ -1701,7 +1711,7 @@ html {
 }
 
 .legal-section-title {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     font-size: 24px;
     margin-bottom: 20px;
     margin-top: 0;
@@ -1710,7 +1720,7 @@ html {
 }
 
 .legal-text {
-    font-family: 'Helvetica Neue', monospace;
+    font-family: 'Switzer', monospace;
     color: #555;
     line-height: 1.7;
     font-size: 16px;
